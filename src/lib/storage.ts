@@ -38,3 +38,8 @@ export const toggleTask = (taskId: string) => {
   saveTasks(updatedTasks);
   return updatedTasks;
 };
+
+export const resetTasks = () => {
+  localStorage.removeItem(STORAGE_KEY);
+  return [];
+};
