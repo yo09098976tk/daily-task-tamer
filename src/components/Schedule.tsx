@@ -13,9 +13,9 @@ const Schedule = () => {
   ];
 
   return (
-    <div className="h-[400px]">
+    <div className="w-full">
       <Table>
-        <TableHeader className="sticky top-0 bg-white z-10">
+        <TableHeader>
           <TableRow className="bg-gray-100">
             <TableHead className="font-bold">Horas/Días</TableHead>
             <TableHead className="font-bold">Lunes</TableHead>
@@ -28,12 +28,12 @@ const Schedule = () => {
         <TableBody>
           {scheduleData.map((row, index) => (
             <TableRow key={index} className={`${row.color} hover:brightness-95 transition-all`}>
-              <TableCell className="font-medium">{row.time}</TableCell>
-              <TableCell>{row.monday}</TableCell>
-              <TableCell>{row.tuesday}</TableCell>
-              <TableCell>{row.wednesday}</TableCell>
-              <TableCell>{row.thursday}</TableCell>
-              <TableCell>{row.friday}</TableCell>
+              <TableCell className="font-medium whitespace-nowrap">{row.time}</TableCell>
+              <TableCell className="whitespace-nowrap">{row.monday}</TableCell>
+              <TableCell className="whitespace-nowrap">{row.tuesday}</TableCell>
+              <TableCell className="whitespace-nowrap">{row.wednesday}</TableCell>
+              <TableCell className="whitespace-nowrap">{row.thursday}</TableCell>
+              <TableCell className="whitespace-nowrap">{row.friday}</TableCell>
             </TableRow>
           ))}
         </TableBody>
