@@ -52,6 +52,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        task: {
+          hover: "#f8fafc",
+          complete: "#f0fdf4",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -67,10 +71,15 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "task-complete": {
+          "0%": { backgroundColor: "transparent" },
+          "100%": { backgroundColor: "#f0fdf4" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "task-complete": "task-complete 0.3s ease-in-out forwards",
       },
     },
   },
